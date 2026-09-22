@@ -6,12 +6,12 @@ window.CIER_CONFIG = {
   /* 【必填】Apps Script 網頁應用程式的網址。
    * 部署 backend/Code.gs 後取得，格式為
    * https://script.google.com/macros/s/AKfycb...../exec          */
-  endpoint: "",
+  endpoint: "https://script.google.com/macros/s/AKfycbxtDDoVJwyQ8IWe5r-Ke7WXi766XM2qzu-XR6U_Gv5LvJ0E_4RfuhD9vAePJHEQQqFU/exec",
 
   /* 承辦人聯絡資訊，顯示於問卷說明與送出失敗時的指引 */
-  contactName:  "（承辦人姓名）",
-  contactPhone: "（02）0000-0000",
-  contactEmail: "（承辦人電子郵件）",
+  contactName:  "（許瓊文 輔佐研究員）",
+  contactPhone: "（02）2735-6006#6361",
+  contactEmail: "（hsucw0724@cier.edu.tw）",
 
   /* 填答期限，顯示於問卷說明 */
   deadline: "民國115年10月17日",
