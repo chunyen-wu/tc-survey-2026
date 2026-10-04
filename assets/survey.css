@@ -291,3 +291,28 @@ ol.refs .rsrc{color:var(--ink-faint)}
 
 .submit .contact{margin:20px 0 0;padding-top:16px;border-top:1px solid var(--rule);
   font-size:16px;line-height:1.8;color:var(--ink-soft)}
+
+/* 共同定義：三節之分界與標題 */
+.ref-body h3{font-family:var(--serif);font-size:21px;font-weight:600;color:var(--ink);
+  letter-spacing:0;margin:0 0 14px;padding:0 0 11px;border-bottom:2px solid var(--accent);
+  display:flex;align-items:baseline;gap:12px}
+.ref-body h3+h3{margin-top:0}
+.ref-body h3 .rnum{display:inline-flex;align-items:center;justify-content:center;
+  width:30px;height:30px;flex:none;background:var(--accent);color:var(--paper);
+  border-radius:50%;font-family:var(--mono);font-size:15px;font-weight:600;align-self:center;line-height:1}
+.ref-body>dl.stages{margin:0 0 34px;padding:0 0 0 4px}
+.ref-body>dl.stages:last-child{margin-bottom:0}
+.ref-body>.refnote{margin:-4px 0 14px;padding-left:4px}
+.ref-body>h3~h3{margin-top:34px;padding-top:0}
+
+/* 區段內嵌之對照清單 */
+.secextra{margin:0 0 30px}
+.secextra details.ref{margin-bottom:0}
+table.list{border-collapse:collapse;width:100%;font-size:16px;min-width:620px}
+table.list th,table.list td{text-align:left;vertical-align:top;padding:9px 12px;border-bottom:1px solid var(--rule)}
+table.list thead th{font-size:14px;letter-spacing:.06em;color:var(--ink-faint);font-weight:500;
+  border-bottom:1px solid var(--rule-firm);white-space:nowrap;position:sticky;top:0;background:var(--paper);z-index:2}
+table.list td.code{font-family:var(--mono);font-size:14px;color:var(--accent);white-space:nowrap}
+table.list td.num{font-family:var(--mono);text-align:center;white-space:nowrap}
+table.list tr.grp th{background:var(--panel2);font-family:var(--sans);font-size:15px;color:var(--ink);
+  font-weight:500;border-bottom:1px solid var(--rule-firm);letter-spacing:.02em}

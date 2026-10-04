@@ -3,10 +3,10 @@ window.SURVEY = {
  "id": "core",
  "title": "核心卷",
  "subtitle": "專家背景、重點技術、判定規則、政策建議與成效指標",
- "intro": "<h2>敬啟者</h2>\n<p>本問卷為環境部氣候變遷署補助研究計畫「減碳技術成熟度曲線構建與碳費投資成效分析」之專家意見調查。本計畫依《氣候變遷因應法》第33條碳費收入專款專用之精神，建構整合技術潛力、市場前景與社會期待之減碳技術評估框架，作為碳費投資決策、補助審查與成效追蹤之參考。</p>\n<p>本計畫已完成氫能應用與碳捕捉、利用與封存（CCUS）兩大領域共60項關鍵技術之盤點，並就每一項目蒐集技術指標、資本市場、政策論述、媒體輿情及國際權威評估等五類證據，據以研判其所處之發展階段。本問卷之目的即在於就研究團隊之判定結果徵詢您的專業意見。</p>\n<h2>填答說明</h2>\n<ol>\n<li>每一技術項目之題幹均附研究團隊所蒐集之證據摘要與在地發展事實，請您在掌握該等資訊之基礎上作答。若對某一題項不具充分把握，請選擇<strong>「99　無法判斷」</strong>，毋須勉強作答；此一選項不計入統計分析。</li>\n<li>您的作答會<strong>隨時自動儲存於本機瀏覽器</strong>，可安心關閉頁面後再以同一連結回來續填，毋須一次完成。頁面底部會顯示最近儲存時間。</li>\n<li>本問卷含矩陣式題型與較長之技術說明，敬請以<strong>桌上型電腦或平板</strong>作答，以免誤填。</li>\n<li>本研究就作答資料採<strong>「研究團隊可識別、對外不揭露」</strong>之原則：為辨識回收狀況、進行資料查核與分層統計分析之需要，研究團隊將保留您的身分與作答之對應關係；惟各位受訪專家之間互不知悉彼此之身分與作答內容，您的個別作答資料亦不對外揭露，最終報告僅呈現彙整後之統計結果。</li>\n</ol>\n<p>財團法人中華經濟研究院　研究團隊　敬上</p>",
+ "intro": "<h2>敬啟者</h2>\n<p>本問卷為環境部氣候變遷署補助研究計畫「減碳技術成熟度曲線構建與碳費投資成效分析」之專家意見調查。本計畫依《氣候變遷因應法》第33條碳費收入專款專用之精神，建構整合技術潛力、市場前景與社會期待之減碳技術評估框架，作為碳費投資決策、補助審查與成效追蹤之參考。</p>\n<p>本計畫已完成氫能應用與碳捕捉、利用與封存（CCUS）兩大領域共60項關鍵技術之盤點，並就每一項目蒐集技術指標、資本市場、政策論述、媒體輿情及國際權威評估等五類證據，據以研判其所處之發展階段。本問卷之目的即在於就研究團隊之判定結果徵詢您的專業意見。</p>\n<h2>填答說明</h2>\n<ol>\n<li>每一技術項目之題幹均附研究團隊所蒐集之證據摘要與在地發展事實，請您在掌握該等資訊之基礎上作答。若對某一題項不具充分把握，請選擇<strong>「99　無法判斷」</strong>，毋須勉強作答；此一選項不計入統計分析。</li>\n<li>您的作答會<strong>隨時自動儲存於本機瀏覽器</strong>，可安心關閉頁面後再以同一連結回來續填，毋須一次完成。頁面底部會顯示最近儲存時間。</li>\n<li>各技術項目之「碳費補助優先順序」為 0 至 5 分：<strong>0 分代表「不適合以碳費補助」</strong>、1 分代表「不應補助」、5 分代表「最高優先」。</li>\\n<li>本問卷含矩陣式題型與較長之技術說明，敬請以<strong>桌上型電腦或平板</strong>作答，以免誤填。</li>\n<li>本研究就作答資料採<strong>「研究團隊可識別、對外不揭露」</strong>之原則：為辨識回收狀況、進行資料查核與分層統計分析之需要，研究團隊將保留您的身分與作答之對應關係；惟各位受訪專家之間互不知悉彼此之身分與作答內容，您的個別作答資料亦不對外揭露，最終報告僅呈現彙整後之統計結果。</li>\n</ol>\n<p>財團法人中華經濟研究院　研究團隊　敬上</p>",
  "reference": {
-  "title": "共同定義：全球技術成熟度（IEA 1–11 級）、Hype Cycle 六階段與我國在地技術成熟度九級",
-  "html": "<h3>全球技術成熟度：IEA 技術成熟度量表（1 至 11 級）</h3><dl class=\"stages\"><div><dt>1–3</dt><dd><b>概念驗證</b>　concept</dd></div><div><dt>4</dt><dd><b>小型原型</b>　small prototype</dd></div><div><dt>5–6</dt><dd><b>大型原型</b>　large prototype</dd></div><div><dt>7–8</dt><dd><b>示範階段</b>　demonstration</dd></div><div><dt>9–10</dt><dd><b>早期採用</b>　early adoption</dd></div><div><dt>11</dt><dd><b>成熟</b>　mature</dd></div></dl><p class=\"refnote\">本問卷各技術項目所載之全球技術成熟度，係直接引用國際能源總署（IEA）年度評估之分級結果；該量表共 11 級，上表為其階段區分。我國在地技術成熟度則為本研究另行建立之 1 至 9 級操作定義，二者尺度不同，不宜直接相減比較。</p><h3>HYPE CYCLE 六階段之操作型定義</h3><dl class=\"stages\"><div><dt>1</dt><dd><b>創新萌芽期</b>　技術剛出現，極少數先行者，市場聲量低。技術成熟度等級 1 至 3、種子輪募資、未列入官方文件。</dd></div><div><dt>2</dt><dd><b>期望膨脹期</b>　媒體與市場高度關注，期望超過實際進展。示範案宣告激增但最終投資決定比例低、創投大幅成長、政治高調承諾。</dd></div><div><dt>3</dt><dd><b>幻滅低谷期（前段）</b>　期望開始校正，資本撤退，技術仍在改進。成熟度持續提升但商業化延宕、創投首次年度下滑、權威機構首次下修。</dd></div><div><dt>4</dt><dd><b>幻滅低谷期（中段）</b>　負面輿論主導，私部門大幅萎縮。示範案延誤或撤案、多年連續創投下滑、權威機構連年下修。</dd></div><div><dt>5</dt><dd><b>迭代爬升期（早段）</b>　務實評估確立可行性，少數成功案例帶動信心。首套商業案完成、創投自低點回升、政策工具聚焦少數明星項目。</dd></div><div><dt>6</dt><dd><b>實質生產期</b>　技術已具商業可行性，市場化運作。多項商業案運轉、不需補助即可推廣。</dd></div></dl><h3>在地技術成熟度九級（產量型／運具設備型／封存基礎設施型）</h3><dl class=\"stages\"><div><dt>1</dt><dd>臺灣無相關產業活動／無相關車輛或設備引進／無場址調查或設施規劃</dd></div><div><dt>2</dt><dd>政策文件提及但無具體計畫／政策文件提及但無引進計畫／政策文件提及但無場址評估</dd></div><div><dt>3</dt><dd>產學合作研究中心成立而無試驗設備／單輛示範車引進或原型開發中／完成潛能評估或初步場址篩選</dd></div><div><dt>4</dt><dd>實驗室規模或試驗設備建置中／示範車輛通過型式認證程序中／完成地質探井或場址細部調查</dd></div><div><dt>5</dt><dd>年處理量噸至千噸級試驗設施運轉／示範車輛或設備投入實地運行（10 輛以下）／取得灌注試驗許可或萬噸級以下灌注</dd></div><div><dt>6</dt><dd>年處理量萬噸級示範案運轉／小規模車隊營運（10 至 50 輛）／中規模灌注試驗（萬噸至十萬噸級）</dd></div><div><dt>7</dt><dd>年處理量數萬至十萬噸級示範運轉／中規模車隊營運（50 輛以上）／大規模灌注或商業封存場址取得許可</dd></div><div><dt>8</dt><dd>首套商業規模運轉／商業車隊規模化營運／首座商業封存場址運轉</dd></div><div><dt>9</dt><dd>多項商業案運轉／市場化銷售而無需補助／多座商業封存場址運轉</dd></div></dl>"
+  "title": "作答共同定義：三組量表對照",
+  "html": "<h3><span class=\"rnum\">1</span>全球技術成熟度　IEA 量表（1 至 11 級）</h3><dl class=\"stages\"><div><dt>1–3</dt><dd><b>概念驗證</b>　concept</dd></div><div><dt>4</dt><dd><b>小型原型</b>　small prototype</dd></div><div><dt>5–6</dt><dd><b>大型原型</b>　large prototype</dd></div><div><dt>7–8</dt><dd><b>示範階段</b>　demonstration</dd></div><div><dt>9–10</dt><dd><b>早期採用</b>　early adoption</dd></div><div><dt>11</dt><dd><b>成熟</b>　mature</dd></div></dl><p class=\"refnote\">本問卷各技術項目所載之全球技術成熟度，係直接引用國際能源總署（IEA）年度評估之分級結果；該量表共 11 級，上表為其階段區分。我國在地技術成熟度則為本研究另行建立之 1 至 9 級操作定義，二者尺度不同，不宜直接相減比較。</p><h3><span class=\"rnum\">2</span>Hype Cycle 六階段</h3><dl class=\"stages\"><div><dt>1</dt><dd><b>創新萌芽期</b>　技術剛出現，極少數先行者，市場聲量低。技術成熟度等級 1 至 3、種子輪募資、未列入官方文件。</dd></div><div><dt>2</dt><dd><b>期望膨脹期</b>　媒體與市場高度關注，期望超過實際進展。示範案宣告激增但最終投資決定比例低、創投大幅成長、政治高調承諾。</dd></div><div><dt>3</dt><dd><b>幻滅低谷期（前段）</b>　期望開始校正，資本撤退，技術仍在改進。成熟度持續提升但商業化延宕、創投首次年度下滑、權威機構首次下修。</dd></div><div><dt>4</dt><dd><b>幻滅低谷期（中段）</b>　負面輿論主導，私部門大幅萎縮。示範案延誤或撤案、多年連續創投下滑、權威機構連年下修。</dd></div><div><dt>5</dt><dd><b>迭代爬升期（早段）</b>　務實評估確立可行性，少數成功案例帶動信心。首套商業案完成、創投自低點回升、政策工具聚焦少數明星項目。</dd></div><div><dt>6</dt><dd><b>實質生產期</b>　技術已具商業可行性，市場化運作。多項商業案運轉、不需補助即可推廣。</dd></div></dl><h3><span class=\"rnum\">3</span>我國在地技術成熟度　本研究量表（1 至 9 級）</h3><p class=\"refnote\">下表每一級之定義依技術型態分列三種，以「／」分隔：<b>產量型</b>（捕捉、轉製、製氫）／<b>運具與設備型</b>／<b>封存與基礎設施型</b>。</p><dl class=\"stages\"><div><dt>1</dt><dd>臺灣無相關產業活動／無相關車輛或設備引進／無場址調查或設施規劃</dd></div><div><dt>2</dt><dd>政策文件提及但無具體計畫／政策文件提及但無引進計畫／政策文件提及但無場址評估</dd></div><div><dt>3</dt><dd>產學合作研究中心成立而無試驗設備／單輛示範車引進或原型開發中／完成潛能評估或初步場址篩選</dd></div><div><dt>4</dt><dd>實驗室規模或試驗設備建置中／示範車輛通過型式認證程序中／完成地質探井或場址細部調查</dd></div><div><dt>5</dt><dd>年處理量噸至千噸級試驗設施運轉／示範車輛或設備投入實地運行（10 輛以下）／取得灌注試驗許可或萬噸級以下灌注</dd></div><div><dt>6</dt><dd>年處理量萬噸級示範案運轉／小規模車隊營運（10 至 50 輛）／中規模灌注試驗（萬噸至十萬噸級）</dd></div><div><dt>7</dt><dd>年處理量數萬至十萬噸級示範運轉／中規模車隊營運（50 輛以上）／大規模灌注或商業封存場址取得許可</dd></div><div><dt>8</dt><dd>首套商業規模運轉／商業車隊規模化營運／首座商業封存場址運轉</dd></div><div><dt>9</dt><dd>多項商業案運轉／市場化銷售而無需補助／多座商業封存場址運轉</dd></div></dl>"
  },
  "sections": [
   {
@@ -97,7 +97,7 @@ window.SURVEY = {
      "title": "您的專長領域（最多勾選三項）",
      "required": true,
      "max": 3,
-     "help": "本題之作答將用於擴充卷之分派：勾選氫能應用技術、能源系統與電力規劃或鋼鐵業製程者分派氫能卷；勾選CCUS捕捉、CCUS利用、CCUS運輸與封存、水泥業製程或石化與化工製程者分派CCUS卷；兩者皆勾選者可自行選擇或兩卷皆填。",
+     "help": "本題之作答僅供分層統計分析之用。您應填答之擴充卷已載明於邀請函，並已由邀請函中之專屬連結指定，毋須依本題自行判斷。",
      "options": [
       [
        "1",
@@ -205,7 +205,7 @@ window.SURVEY = {
    "id": "tech",
    "kind": "key",
    "title": "區段二　重點技術項目評估（10 項）",
-   "note": "各項目之題幹依「技術說明、國際發展現況、我國在地發展事實、五維證據摘要」四部分呈現；其中在地發展事實所載之規模數據，均以事業名稱、規模數值與年份三要素齊備之公開資訊為據。階段與成熟度之定義請參閱上方「共同定義」。",
+   "note": "本區段之 10 項係自 60 項盤點結果中擇定之重點技術，其對應編號標示於各項目標頭。各項目之題幹依「技術說明、國際發展現況、我國在地發展事實、五維證據摘要」四部分呈現；其中在地發展事實所載之規模數據，均以事業名稱、規模數值與年份三要素齊備之公開資訊為據。階段與成熟度之定義請參閱上方「共同定義」。",
    "items": [
     {
      "id": "K1",
@@ -241,7 +241,9 @@ window.SURVEY = {
        "IEA與全球水泥與混凝土協會均認可水泥業鈣迴路為主流減碳路徑之一"
       ]
      ],
-     "team": "全球：迭代爬升期（早段）；在地：迭代爬升期（早段）"
+     "code": "C-CM2",
+     "teamG": "迭代爬升期（早段）",
+     "teamL": "迭代爬升期（早段）"
     },
     {
      "id": "K2",
@@ -277,7 +279,9 @@ window.SURVEY = {
        "IEA評為新興技術；全球CCU路徑整體受成本與經濟性壓力影響"
       ]
      ],
-     "team": "全球：幻滅低谷期（前段）；在地：迭代爬升期（早段）"
+     "code": "C-CH7",
+     "teamG": "幻滅低谷期（前段）",
+     "teamL": "迭代爬升期（早段）"
     },
     {
      "id": "K3",
@@ -313,7 +317,9 @@ window.SURVEY = {
        "IEA對二氧化碳轉甲醇路徑評為示範階段；全球CCU路徑受整體經濟性影響"
       ]
      ],
-     "team": "全球：幻滅低谷期（前段）；在地：迭代爬升期（早段）"
+     "code": "C-U3",
+     "teamG": "幻滅低谷期（前段）",
+     "teamL": "迭代爬升期（早段）"
     },
     {
      "id": "K4",
@@ -349,7 +355,9 @@ window.SURVEY = {
        "IEA與車輛研究測試中心均評重型應用為主流路徑"
       ]
      ],
-     "team": "全球：迭代爬升期（早段）；在地：迭代爬升期（早段）"
+     "code": "H-T1",
+     "teamG": "迭代爬升期（早段）",
+     "teamL": "迭代爬升期（早段）"
     },
     {
      "id": "K5",
@@ -385,7 +393,9 @@ window.SURVEY = {
        "IEEFA指IEA對CCUS於淨零情境之貢獻預估連年下修（13%→不足5%）"
       ]
      ],
-     "team": "全球：幻滅低谷期（中段）；在地：幻滅低谷期（中段）"
+     "code": "C-P1",
+     "teamG": "幻滅低谷期（中段）",
+     "teamL": "幻滅低谷期（中段）"
     },
     {
      "id": "K6",
@@ -421,7 +431,9 @@ window.SURVEY = {
        "IEA與MIT均予正面評價，惟均附加需補貼之條件"
       ]
      ],
-     "team": "全球：幻滅低谷期（前段）；在地：創新萌芽期"
+     "code": "H-S4",
+     "teamG": "幻滅低谷期（前段）",
+     "teamL": "創新萌芽期"
     },
     {
      "id": "K7",
@@ -457,7 +469,9 @@ window.SURVEY = {
        "Hydrogen Council評為已由過熱論述進入務實階段"
       ]
      ],
-     "team": "全球：迭代爬升期（早段）；在地：幻滅低谷期（前段）"
+     "code": "H-P1",
+     "teamG": "迭代爬升期（早段）",
+     "teamL": "幻滅低谷期（前段）"
     },
     {
      "id": "K8",
@@ -493,7 +507,9 @@ window.SURVEY = {
        "IEEFA與Enverus均指出地質封存為全球CCUS部署之主要瓶頸"
       ]
      ],
-     "team": "全球：幻滅低谷期（中段）；在地：幻滅低谷期（前段）"
+     "code": "C-ST2",
+     "teamG": "幻滅低谷期（中段）",
+     "teamL": "幻滅低谷期（前段）"
     },
     {
      "id": "K9",
@@ -529,7 +545,9 @@ window.SURVEY = {
        "IEA評為穩健路徑；IMO 2050航運減碳框架若通過將形成需求拉力"
       ]
      ],
-     "team": "全球：迭代爬升期（早段）；在地：幻滅低谷期（前段）"
+     "code": "H-CR1",
+     "teamG": "迭代爬升期（早段）",
+     "teamL": "幻滅低谷期（前段）"
     },
     {
      "id": "K10",
@@ -565,7 +583,9 @@ window.SURVEY = {
        "IEA對SOEC之評價較其他電解技術樂觀，惟整體電解市場受氫能期望下修拖累"
       ]
      ],
-     "team": "全球：幻滅低谷期（前段）；在地：創新萌芽期"
+     "code": "H-PR3",
+     "teamG": "幻滅低谷期（前段）",
+     "teamL": "創新萌芽期"
     }
    ]
   },
@@ -573,7 +593,7 @@ window.SURVEY = {
    "type": "section",
    "id": "rules",
    "title": "區段三　判定規則檢核",
-   "note": "本研究為使各項判定可由第三人依相同證據重複檢核，就技術定位分類、成熟度評定、階段判定、落差類型判定與潛力評分等，分別建立明文化之操作規則。本區段就其中五項關鍵規則徵詢您的意見。",
+   "note": "本研究為使各項判定可由第三人依相同證據重複檢核，就成熟度評定、階段判定、落差類型判定與證據聚合等，分別建立明文化之操作規則。本區段就其中五項關鍵規則徵詢您的意見。",
    "questions": [
     {
      "id": "R1",
@@ -643,9 +663,57 @@ window.SURVEY = {
    ]
   },
   {
+   "id": "frame",
+   "type": "section",
+   "title": "區段四　盤點框架檢核",
+   "note": "本區段就技術定位之六分類、60 項盤點結果之整體合理性，以及碳費補助範疇之界定徵詢您的意見。敬請先展開下方之「60 項技術盤點結果一覽」，再行作答。",
+   "html": "<details class=\"ref\"><summary>60 項技術盤點結果一覽（依技術定位分組）</summary><div class=\"ref-body\"><p class=\"refnote\">下表為本研究 60 項技術之完整盤點結果，依技術定位之六類分組呈現，供下列三題作答時對照。「對照組」依性質再分為方法論組與不適用組，合計 6 項。</p><div class=\"tablewrap\"><table class=\"list\"><thead><tr><th>編號</th><th>技術名稱（中文）</th><th>技術名稱（英文）</th><th>全球技術成熟度</th><th>在地技術成熟度</th></tr></thead><tbody><tr class=\"grp\"><th colspan=\"5\">主要評估對象　40 項</th></tr><tr><td class=\"code\">C-CH1</td><td>氨製程—化學吸收</td><td>Ammonia – chemical absorption</td><td class=\"num\">第 11 級</td><td class=\"num\">第 5 級</td></tr><tr><td class=\"code\">C-CH2</td><td>氨製程—物理吸收</td><td>Ammonia – physical absorption</td><td class=\"num\">第 9 至 10 級</td><td class=\"num\">第 1 級</td></tr><tr><td class=\"code\">C-CH3</td><td>氨製程—物理吸附</td><td>Ammonia – physical adsorption</td><td class=\"num\">第 5 至 6 級</td><td class=\"num\">第 1 級</td></tr><tr><td class=\"code\">C-CH4</td><td>甲醇製程—化學吸收</td><td>Methanol – chemical absorption</td><td class=\"num\">第 9 至 10 級</td><td class=\"num\">第 5 級</td></tr><tr><td class=\"code\">C-CH5</td><td>甲醇製程—物理吸收</td><td>Methanol – physical absorption</td><td class=\"num\">第 7 至 8 級</td><td class=\"num\">第 1 級</td></tr><tr><td class=\"code\">C-CH6</td><td>甲醇製程—物理吸附</td><td>Methanol – physical adsorption</td><td class=\"num\">第 7 至 8 級</td><td class=\"num\">第 1 級</td></tr><tr><td class=\"code\">C-CH7</td><td>高值化學品—物理吸收</td><td>High-value chemical – physical absorption</td><td class=\"num\">第 7 至 8 級</td><td class=\"num\">第 7 級</td></tr><tr><td class=\"code\">C-CH8</td><td>高值化學品—化學吸收</td><td>High-value chemical – chemical absorption</td><td class=\"num\">第 7 至 8 級</td><td class=\"num\">第 1 級</td></tr><tr><td class=\"code\">C-CM1</td><td>水泥—化學吸收</td><td>Cement – chemical absorption</td><td class=\"num\">第 7 至 8 級</td><td class=\"num\">第 3 級</td></tr><tr><td class=\"code\">C-CM2</td><td>水泥—鈣迴路</td><td>Cement – calcium looping</td><td class=\"num\">第 7 至 8 級</td><td class=\"num\">第 5 級</td></tr><tr><td class=\"code\">C-CM3</td><td>水泥—富氧燃燒</td><td>Cement – oxy-fuelling</td><td class=\"num\">第 5 至 6 級</td><td class=\"num\">第 3 級</td></tr><tr><td class=\"code\">C-CM4</td><td>水泥—物理吸附</td><td>Cement – physical adsorption</td><td class=\"num\">第 5 至 6 級</td><td class=\"num\">第 1 級</td></tr><tr><td class=\"code\">C-CM5</td><td>水泥—直接分離（LEILAC）</td><td>Cement – direct separation</td><td class=\"num\">第 5 至 6 級</td><td class=\"num\">第 1 級</td></tr><tr><td class=\"code\">C-F1</td><td>天然氣處理</td><td>Natural gas processing</td><td class=\"num\">第 11 級</td><td class=\"num\">第 3 級</td></tr><tr><td class=\"code\">C-F2</td><td>天然氣製氫+CCS（藍氫）</td><td>Hydrogen from gas with carbon capture</td><td class=\"num\">第 9 至 10 級</td><td class=\"num\">第 4 級</td></tr><tr><td class=\"code\">C-P1</td><td>燃煤—化學吸收</td><td>Coal – chemical absorption (power)</td><td class=\"num\">第 9 至 10 級</td><td class=\"num\">第 5 級</td></tr><tr><td class=\"code\">C-P2</td><td>燃煤—富氧燃燒</td><td>Coal – oxy-fuelling</td><td class=\"num\">第 7 至 8 級</td><td class=\"num\">第 1 級</td></tr><tr><td class=\"code\">C-P3</td><td>燃煤—燃前捕捉</td><td>Coal – pre-combustion</td><td class=\"num\">第 7 至 8 級</td><td class=\"num\">第 1 級</td></tr><tr><td class=\"code\">C-P4</td><td>天然氣—化學吸收</td><td>Natural gas – chemical absorption (power)</td><td class=\"num\">第 7 至 8 級</td><td class=\"num\">第 5 級</td></tr><tr><td class=\"code\">C-S1</td><td>直接還原鐵—化學吸收</td><td>Direct reduced iron – chemical absorption</td><td class=\"num\">第 9 至 10 級</td><td class=\"num\">第 3 級</td></tr><tr><td class=\"code\">C-S2</td><td>熔煉還原—富氧物理吸附</td><td>Smelt reduction – oxygen rich – physical adsorption</td><td class=\"num\">第 7 至 8 級</td><td class=\"num\">第 1 級</td></tr><tr><td class=\"code\">C-S3</td><td>高爐製程氣富氫+碳捕捉（含中鋼-工研院鋼化聯產捕捉端）</td><td>BF process gas H2 enrichment + chemical absorption</td><td class=\"num\">第 5 至 6 級</td><td class=\"num\">第 6 級</td></tr><tr><td class=\"code\">C-S4</td><td>直接還原鐵—物理吸附</td><td>Direct reduced iron – physical adsorption</td><td class=\"num\">第 5 至 6 級</td><td class=\"num\">第 1 級</td></tr><tr><td class=\"code\">C-U1</td><td>尿素</td><td>Urea</td><td class=\"num\">第 11 級</td><td class=\"num\">第 8 級</td></tr><tr><td class=\"code\">C-U2</td><td>混凝土（CO2 礦化建材）</td><td>Concrete (CO2 mineralization)</td><td class=\"num\">第 9 至 10 級</td><td class=\"num\">第 5 級</td></tr><tr><td class=\"code\">C-U3</td><td>甲醇（CO2 轉製）</td><td>Methanol (CO2 to methanol)</td><td class=\"num\">第 7 至 8 級</td><td class=\"num\">第 5 級</td></tr><tr><td class=\"code\">C-U4</td><td>合成甲烷</td><td>Synthetic methane</td><td class=\"num\">第 7 至 8 級</td><td class=\"num\">第 1 級</td></tr><tr><td class=\"code\">H-C1</td><td>電解氨製造</td><td>NH3 – Electrolysis (VRE)</td><td class=\"num\">第 7 至 8 級</td><td class=\"num\">第 2 級</td></tr><tr><td class=\"code\">H-C2</td><td>電解甲醇製造</td><td>MeOH – Electrolysis (VRE)</td><td class=\"num\">第 7 至 8 級</td><td class=\"num\">第 2 級</td></tr><tr><td class=\"code\">H-C3</td><td>低能源 Haber-Bosch 氨製造</td><td>NH3 – Low-energy Haber-Bosch</td><td class=\"num\">第 5 至 6 級</td><td class=\"num\">第 2 級</td></tr><tr><td class=\"code\">H-C4</td><td>氨電漿合成</td><td>NH3 plasma synthesis</td><td class=\"num\">第 3 至 4 級</td><td class=\"num\">第 1 級</td></tr><tr><td class=\"code\">H-O1</td><td>工業高溫加熱</td><td>High-temperature heating</td><td class=\"num\">第 7 至 8 級</td><td class=\"num\">第 2 級</td></tr><tr><td class=\"code\">H-O2</td><td>水泥窯氫氣混燒</td><td>Cement kiln blending</td><td class=\"num\">第 5 至 6 級</td><td class=\"num\">第 2 級</td></tr><tr><td class=\"code\">H-P1</td><td>天然氣機組混氫燃燒</td><td>H2/NH3 blending in gas turbines</td><td class=\"num\">第 7 至 8 級</td><td class=\"num\">第 5 級</td></tr><tr><td class=\"code\">H-S1</td><td>高爐氫氣混燒</td><td>H2 blending in BF</td><td class=\"num\">第 7 至 8 級</td><td class=\"num\">第 3 級</td></tr><tr><td class=\"code\">H-S2</td><td>直接還原鐵氫氣混燒</td><td>H2 blending in DRI</td><td class=\"num\">第 7 至 8 級</td><td class=\"num\">第 2 級</td></tr><tr><td class=\"code\">H-S3</td><td>100% 氫直接還原鐵—氣密迴轉爐</td><td>100% H2 DRI – airtight rotary furnace</td><td class=\"num\">第 5 至 6 級</td><td class=\"num\">第 1 級</td></tr><tr><td class=\"code\">H-S4</td><td>100% 氫直接還原鐵—豎爐</td><td>100% H2 DRI – shaft furnaces</td><td class=\"num\">第 5 至 6 級</td><td class=\"num\">第 3 級</td></tr><tr><td class=\"code\">H-S5</td><td>100% 氫 DRI—改良礦石精煉</td><td>100% H2 DRI – Improved ore refining</td><td class=\"num\">第 5 至 6 級</td><td class=\"num\">第 1 級</td></tr><tr><td class=\"code\">H-S7</td><td>氫電漿熔煉還原</td><td>H2 plasma smelting reduction</td><td class=\"num\">第 3 至 4 級</td><td class=\"num\">第 1 級</td></tr><tr class=\"grp\"><th colspan=\"5\">主要評估對象（負碳子類）　4 項</th></tr><tr><td class=\"code\">C-F3</td><td>沼氣+CCS</td><td>Biomethane with carbon capture</td><td class=\"num\">第 7 至 8 級</td><td class=\"num\">第 2 級</td></tr><tr><td class=\"code\">C-F4</td><td>蔗糖/澱粉乙醇+CCS</td><td>Ethanol from sugar/starch with carbon capture</td><td class=\"num\">第 7 至 8 級</td><td class=\"num\">第 3 級</td></tr><tr><td class=\"code\">C-F5</td><td>纖維素乙醇+CCS</td><td>Ethanol from lignocellulose with carbon capture</td><td class=\"num\">第 5 至 6 級</td><td class=\"num\">第 1 級</td></tr><tr><td class=\"code\">C-P5</td><td>生質能—化學吸收（BECCS 發電）</td><td>Biomass – chemical absorption (power, BECCS)</td><td class=\"num\">第 7 至 8 級</td><td class=\"num\">第 2 級</td></tr><tr class=\"grp\"><th colspan=\"5\">供給側約束　3 項</th></tr><tr><td class=\"code\">H-PR1</td><td>鹼性電解（ALK）</td><td>Alkaline Water Electrolysis</td><td class=\"num\">第 9 至 10 級</td><td class=\"num\">第 4 級</td></tr><tr><td class=\"code\">H-PR2</td><td>質子交換膜電解（PEM）</td><td>Proton Exchange Membrane Electrolysis</td><td class=\"num\">8-9</td><td class=\"num\">第 3 級</td></tr><tr><td class=\"code\">H-PR3</td><td>固態氧化物電解（SOEC）</td><td>Solid Oxide Electrolysis Cell</td><td class=\"num\">第 7 至 8 級</td><td class=\"num\">第 4 級</td></tr><tr class=\"grp\"><th colspan=\"5\">跨域應用　1 項</th></tr><tr><td class=\"code\">H-T1</td><td>氫燃料電池—重型運輸與堆高機</td><td>Hydrogen fuel cell – heavy duty / forklift</td><td class=\"num\">第 7 至 8 級</td><td class=\"num\">第 5 級</td></tr><tr class=\"grp\"><th colspan=\"5\">基礎設施（共用前提）　6 項</th></tr><tr><td class=\"code\">C-ST2</td><td>深層鹽水層</td><td>Saline formations</td><td class=\"num\">第 9 至 10 級</td><td class=\"num\">第 5 級</td></tr><tr><td class=\"code\">C-ST3</td><td>枯竭油氣田</td><td>Depleted oil and gas reservoirs</td><td class=\"num\">第 7 至 8 級</td><td class=\"num\">第 5 級</td></tr><tr><td class=\"code\">C-T1</td><td>管道</td><td>Pipeline</td><td class=\"num\">第 11 級</td><td class=\"num\">第 2 級</td></tr><tr><td class=\"code\">C-T2</td><td>船運—港對港</td><td>Ship – port to port</td><td class=\"num\">第 7 至 8 級</td><td class=\"num\">第 2 級</td></tr><tr><td class=\"code\">C-T3</td><td>船運—港對離岸</td><td>Ship – port to offshore</td><td class=\"num\">第 5 至 6 級</td><td class=\"num\">第 1 級</td></tr><tr><td class=\"code\">H-CR1</td><td>氨作為氫能載體（進口+裂解）</td><td>Ammonia carrier (import + cracking)</td><td class=\"num\">第 7 至 8 級</td><td class=\"num\">第 2 級</td></tr><tr class=\"grp\"><th colspan=\"5\">對照組（方法論）　4 項</th></tr><tr><td class=\"code\">C-A1</td><td>直接空氣捕捉—固體吸附</td><td>Direct air capture – solid</td><td class=\"num\">第 5 至 6 級</td><td class=\"num\">第 1 級</td></tr><tr><td class=\"code\">C-A2</td><td>直接空氣捕捉—液體吸收</td><td>Direct air capture – liquid</td><td class=\"num\">第 5 至 6 級</td><td class=\"num\">第 1 級</td></tr><tr><td class=\"code\">C-U5</td><td>合成液態碳氫燃料</td><td>Synthetic liquid hydrocarbons</td><td class=\"num\">第 5 至 6 級</td><td class=\"num\">第 1 級</td></tr><tr><td class=\"code\">H-O3</td><td>氧化鋁精煉</td><td>Alumina refining</td><td class=\"num\">第 3 至 4 級</td><td class=\"num\">第 1 級</td></tr><tr class=\"grp\"><th colspan=\"5\">對照組（不適用）　2 項</th></tr><tr><td class=\"code\">C-F6</td><td>煤製氫+CCS</td><td>Hydrogen from coal with carbon capture</td><td class=\"num\">第 5 至 6 級</td><td class=\"num\">第 1 級</td></tr><tr><td class=\"code\">C-ST1</td><td>加強型油田復採（EOR）</td><td>Enhanced oil recovery</td><td class=\"num\">第 11 級</td><td class=\"num\">第 1 級</td></tr></tbody></table></div></div></details>",
+   "questions": [
+    {
+     "id": "R6",
+     "type": "single",
+     "title": "技術定位六分類之合理性",
+     "help": "六類為：主要評估對象、主要評估對象（負碳子類）、供給側約束、跨域應用、基礎設施（共用前提）、對照組。各項目之實際歸類請見上方「60 項技術盤點結果一覽」。",
+     "optset": "lik5",
+     "required": true
+    },
+    {
+     "id": "R6-1",
+     "type": "textarea",
+     "title": "若您認為應修正，請說明（非必填）"
+    },
+    {
+     "id": "R7",
+     "type": "single",
+     "title": "60 項技術盤點結果之整體合理性",
+     "help": "說明：本研究依技術定位判定之結果為主要評估對象 40 項、負碳子類 4 項、供給側約束 3 項、跨域應用 1 項、基礎設施 6 項、對照組 6 項；完整清單請見上方「60 項技術盤點結果一覽」。",
+     "optset": "lik5",
+     "required": true
+    },
+    {
+     "id": "R7-1",
+     "type": "textarea",
+     "title": "若您認為應修正，請說明（非必填）"
+    },
+    {
+     "id": "R8",
+     "type": "single",
+     "title": "碳費補助範疇限於 46 項之合理性",
+     "help": "說明：本研究建議碳費補助範疇限於「主要評估對象」40 項與「基礎設施（共用前提）」6 項，合計 46 項，即上方一覽表之第一組與第五組；其餘項目分別由碳權市場機制（負碳子類 4 項）、產業政策機制（供給側約束 3 項）處理，或不列入（跨域應用 1 項、對照組 6 項）。",
+     "optset": "lik5",
+     "required": true
+    },
+    {
+     "id": "R8-1",
+     "type": "textarea",
+     "title": "若您認為應修正，請說明（非必填）"
+    }
+   ]
+  },
+  {
    "type": "section",
    "id": "policy",
-   "title": "區段四　整體政策建議",
+   "title": "區段五　整體政策建議",
    "note": "作答時請一併考量環境部於 115 年 7 月 14 日發布之「溫室氣體減量技術及氣候變遷調適補助辦法」：該辦法共 15 條，第 2 條定補助對象、第 3 條定補助項目七款、第 4 條定不予補助之法定義務事項、第 7 條與第 8 條定審查程序、第 9 條定補助比率不得超過總經費 50%（但有政策性考量經核准者不在此限）、第 13 條定受補助案件資訊應按季公開。該辦法本身未訂實質審查基準與評分配分，係留待依第 3 條第 2 項公告之個別補助計畫規範。",
    "questions": [
     {
@@ -705,8 +773,8 @@ window.SURVEY = {
     {
      "id": "P3",
      "type": "single",
-     "title": "技術定位六分類之合理性",
-     "help": "六類為：主要評估對象、主要評估對象（負碳子類）、供給側約束、跨域應用、基礎設施（共用前提）、對照組。",
+     "title": "Hype Cycle 階段與政策介入工具之對應關係",
+     "help": "說明：本研究主張——期望膨脹期以標準制定與第三方驗證為首選，避免公共資金與民間投資重疊；幻滅低谷期前段以研發共研與示範場域補助分擔風險，並以有條件、有期限、有查核為原則；迭代爬升期採績效型補助並以實際減碳績效作為撥付條件；實質生產期因附加性顯著降低，宜退出直接補助改以市場機制引導。",
      "optset": "lik5",
      "required": true
     },
@@ -718,8 +786,8 @@ window.SURVEY = {
     {
      "id": "P4",
      "type": "single",
-     "title": "60 項技術盤點結果之整體合理性",
-     "help": "說明：本研究依技術定位判定之結果為主要評估對象 40 項、負碳子類 4 項、供給側約束 3 項、跨域應用 1 項、基礎設施 6 項、對照組 6 項。",
+     "title": "補助案審查配分建議之合理性",
+     "help": "說明：本研究建議之配分為——減碳效益 30 分、公共資金附加性 25 分、在地產業關聯性 20 分、補助工具適當性 15 分、管理品質 10 分。",
      "optset": "lik5",
      "required": true
     },
@@ -729,10 +797,16 @@ window.SURVEY = {
      "title": "若您認為應修正，請說明（非必填）"
     },
     {
+     "id": "P4-2",
+     "type": "textarea",
+     "title": "若您認為審查配分應調整，請提出建議配分（合計 100 分，非必填）",
+     "placeholder": "例如：減碳效益 30 分、附加性 25 分、在地產業關聯性 20 分、補助工具適當性 15 分、管理品質 10 分"
+    },
+    {
      "id": "P5",
      "type": "single",
-     "title": "地質封存推動之主要限制之判斷",
-     "help": "說明：本研究初步判斷，深層鹽水層封存等地質封存項目在我國推動之主要限制，較偏向法制、場址許可、監測查核、長期責任及社會溝通等配套條件，而非單純技術成熟度不足。",
+     "title": "補助比率差異化設計之合理性",
+     "help": "說明：本研究建議於補助辦法第 9 條所定 50% 上限內差異化——第一象限（高潛力、短時程）30% 至 40%；第二象限（高潛力、長時程）40% 至 50%；基礎設施類項目得依第 9 條但書提高比率。",
      "optset": "lik5",
      "required": true
     },
@@ -744,8 +818,8 @@ window.SURVEY = {
     {
      "id": "P6",
      "type": "single",
-     "title": "碳費補助範疇限於 46 項之合理性",
-     "help": "說明：本研究建議碳費補助範疇限於「主要評估對象」40 項與「基礎設施」6 項合計 46 項；其餘項目分別由碳權市場機制（負碳子類 4 項）、產業政策機制（供給側約束 3 項）處理，或不列入（對照組 6 項）。",
+     "title": "「標準制定」與「第三方驗證」之法制定位",
+     "help": "說明：本研究認為此二類工具之性質為主管機關自辦或委辦之業務，而非對外補助，宜循補助辦法第 3 條第 1 項第 7 款或基金其他用途項目辦理，不宜以補助形式為之。",
      "optset": "lik5",
      "required": true
     },
@@ -756,64 +830,6 @@ window.SURVEY = {
     },
     {
      "id": "P7",
-     "type": "single",
-     "title": "Hype Cycle 階段與政策介入工具之對應關係",
-     "help": "說明：本研究主張——期望膨脹期以標準制定與第三方驗證為首選，避免公共資金與民間投資重疊；幻滅低谷期前段以研發共研與示範場域補助分擔風險，並以有條件、有期限、有查核為原則；迭代爬升期採績效型補助並以實際減碳績效作為撥付條件；實質生產期因附加性顯著降低，宜退出直接補助改以市場機制引導。",
-     "optset": "lik5",
-     "required": true
-    },
-    {
-     "id": "P7-1",
-     "type": "textarea",
-     "title": "若您認為應修正，請說明（非必填）"
-    },
-    {
-     "id": "P8",
-     "type": "single",
-     "title": "補助案審查配分建議之合理性",
-     "help": "說明：本研究建議之配分為——減碳效益 30 分、公共資金附加性 25 分、在地產業關聯性 20 分、補助工具適當性 15 分、管理品質 10 分。",
-     "optset": "lik5",
-     "required": true
-    },
-    {
-     "id": "P8-1",
-     "type": "textarea",
-     "title": "若您認為應修正，請說明（非必填）"
-    },
-    {
-     "id": "P9",
-     "type": "single",
-     "title": "補助比率差異化設計之合理性",
-     "help": "說明：本研究建議於補助辦法第 9 條所定 50% 上限內差異化——第一象限（高潛力、短時程）30% 至 40%；第二象限（高潛力、長時程）40% 至 50%；基礎設施類項目得依第 9 條但書提高比率。",
-     "optset": "lik5",
-     "required": true
-    },
-    {
-     "id": "P9-1",
-     "type": "textarea",
-     "title": "若您認為應修正，請說明（非必填）"
-    },
-    {
-     "id": "P10",
-     "type": "single",
-     "title": "「標準制定」與「第三方驗證」之法制定位",
-     "help": "說明：本研究認為此二類工具之性質為主管機關自辦或委辦之業務，而非對外補助，宜循補助辦法第 3 條第 1 項第 7 款或基金其他用途項目辦理，不宜以補助形式為之。",
-     "optset": "lik5",
-     "required": true
-    },
-    {
-     "id": "P10-1",
-     "type": "textarea",
-     "title": "若您認為應修正，請說明（非必填）"
-    },
-    {
-     "id": "P8-2",
-     "type": "textarea",
-     "title": "若您認為審查配分應調整，請提出建議配分（合計 100 分，非必填）",
-     "placeholder": "例如：減碳效益 30 分、附加性 25 分、在地產業關聯性 20 分、補助工具適當性 15 分、管理品質 10 分"
-    },
-    {
-     "id": "P11",
      "type": "textarea",
      "title": "開放性意見（非必填）",
      "help": "就本研究未涵蓋之政策議題、研究方法限制，或對碳費投資策略之整體建議，敬請補充。"
@@ -823,7 +839,7 @@ window.SURVEY = {
   {
    "type": "section",
    "id": "kpi",
-   "title": "區段五　碳費投資成效指標評估",
+   "title": "區段六　碳費投資成效指標評估",
    "note": "本研究參酌轉型路徑倡議（TPI）之雙軌評估架構、永續智慧城市聯盟（U4SSC）之指標分層設計，以及麥格理集團 Green Impact Reporting Criteria 所強調之附加性與可量化性原則，研擬成效指標草案，分為技術績效軌（E1 至 E5）與管理品質軌（E6 至 E10）。",
    "questions": [
     {

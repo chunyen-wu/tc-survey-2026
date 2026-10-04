@@ -161,13 +161,13 @@
 
   /* ---------- 渲染：技術項目 ---------- */
   var KEY_Q = [
-    { suf:"Q1", title:"依上開證據，本技術之「全球」Hype Cycle 階段應判定為", optset:"stage", type:"single", required:true },
-    { suf:"Q2", title:"依上開證據，本技術之「我國在地」Hype Cycle 階段應判定為", optset:"stage", type:"single", required:true, teamHelp:true },
+    { suf:"Q1", title:"依上開證據，本技術之「全球」Hype Cycle 階段應判定為", optset:"stage", type:"single", required:true, teamHelp:"G" },
+    { suf:"Q2", title:"依上開證據，本技術之「我國在地」Hype Cycle 階段應判定為", optset:"stage", type:"single", required:true, teamHelp:"L" },
     { suf:"Q3", title:"技術潛力四構面評分", type:"matrix4",
       help:"本研究將依既定權重加總後換算為技術潛力級別，故請就各構面分別評分，毋須直接評定級別。各構面之級距定義列於選項內。" },
     { suf:"Q4", title:"本技術自現階段發展至我國商業化規模應用之預估時程", optset:"time", type:"single", required:true },
-    { suf:"Q5", title:"本技術之碳費補助優先順序", optset:"prio5", type:"single", required:true,
-      help:"請綜合考量減碳潛力、在地產業關聯性，以及<b>附加性</b>——即若無公共資金介入，該技術之發展是否難以達成預期進度。" },
+    { suf:"Q5", title:"本技術之碳費補助優先順序", optset:"prio0", type:"single", required:true,
+      help:"請綜合考量減碳潛力、在地產業關聯性，以及<b>附加性</b>——即若無公共資金介入，該技術之發展是否難以達成預期進度。若您認為本技術不宜以碳費補助（例如宜由碳權市場、產業政策或其他工具處理），請選 <b>0</b>。" },
     { suf:"Q6", title:"開放性意見（非必填）", type:"textarea",
       help:"若您認為上開證據摘要有所遺漏或錯誤、或就本技術之介入策略有其他建議，敬請補充。" }
   ];
@@ -206,7 +206,7 @@
     sec.id = "item_" + it.id;
     JUMPS.push({ id:sec.id, label:it.id + "　" + it.name });
     var ih = el("div","ihead");
-    ih.appendChild(el("p","eyebrow", esc(it.id) + "　項目 " + idx + " ／ " + total));
+    ih.appendChild(el("p","eyebrow", esc(it.code || it.id) + "　項目 " + idx + " ／ " + total));
     ih.appendChild(el("h3","iname", esc(it.name)));
     ih.appendChild(el("p","ename", esc(it.en || "")));
     sec.appendChild(ih);
@@ -240,8 +240,12 @@
     KEY_Q.forEach(function (t) {
       var q = { id: it.id + "-" + t.suf, title:t.title, type:t.type, optset:t.optset,
                 required:t.required, help:t.help };
-      if (t.teamHelp && it.team) {
-        q.help = "研究團隊之判定為　<b>" + esc(it.team) + "</b>。此一資訊僅供參考，請依您的專業判斷作答，毋須與之一致。";
+      if (t.teamHelp) {
+        var tv = (t.teamHelp === "G") ? it.teamG : it.teamL;
+        if (tv) {
+          q.help = "研究團隊就本題之判定為　<b>" + esc(tv)
+            + "</b>。此一資訊僅供參考，請依您的專業判斷作答，毋須與之一致。";
+        }
       }
       sec.appendChild(question(q, sec.id));
     });
@@ -252,7 +256,7 @@
     var sec = el("section","item");
     sec.id = "item_" + it.id;
     var ih = el("div","ihead");
-    ih.appendChild(el("p","eyebrow", esc(it.id) + "　項目 " + idx + " ／ " + total));
+    ih.appendChild(el("p","eyebrow", esc(it.code || it.id) + "　項目 " + idx + " ／ " + total));
     ih.appendChild(el("h3","iname", esc(it.name)));
     ih.appendChild(el("p","ename", esc(it.en || "")));
     sec.appendChild(ih);
@@ -312,6 +316,7 @@
       var h = el("div","sect-head");
       h.innerHTML = "<h2>" + esc(sc.title) + "</h2>" + (sc.note ? "<p>" + sc.note + "</p>" : "");
       sec.appendChild(h);
+      if (sc.html) { var ex = el("div","secextra"); ex.innerHTML = sc.html; sec.appendChild(ex); }
       (sc.questions || []).forEach(function (q) { sec.appendChild(question(q, sec.id)); });
       root.appendChild(sec);
     } else if (sc.type === "items") {
@@ -394,7 +399,7 @@
   var st = document.getElementById("st");
   var fill = document.getElementById("fill");
   var doneEl = document.getElementById("done");
-  document.getElementById("total").textContent = REQUIRED.length + 1; /* +1 為代碼 */
+  document.getElementById("total").textContent = REQUIRED.length;
 
   function collect() {
     var d = {};
@@ -416,11 +421,10 @@
       else if (r.text) { if (d[r.name]) n++; }
       else if (d[r.name]) n++;
     });
-    if (currentId()) n++;
     return n;
   }
   function progress() {
-    var n = answeredCount(), t = REQUIRED.length + 1;
+    var n = answeredCount(), t = REQUIRED.length;
     doneEl.textContent = n;
     fill.style.width = (t ? (n / t * 100) : 0) + "%";
   }
@@ -489,8 +493,7 @@
     var d = collect(), missing = [];
     document.querySelectorAll(".q").forEach(function (q) { q.classList.remove("flag"); });
     var re = new RegExp(CFG.idPattern || "^[A-Za-z][0-9]{2}$");
-    if (!currentId()) missing.push({ label:"受訪者代碼", anchor:"q_RID" });
-    else if (!re.test(currentId())) missing.push({ label:"受訪者代碼格式不正確（" + (CFG.idHint||"") + "）", anchor:"q_RID" });
+    if (currentId() && !re.test(currentId())) missing.push({ label:"受訪者代碼格式不正確（" + (CFG.idHint||"") + "）", anchor:"q_RID" });
     REQUIRED.forEach(function (r) {
       if (!d[r.name]) missing.push({ label:r.label, anchor:r.anchor });
     });
