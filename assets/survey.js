@@ -370,9 +370,10 @@
     var v = idInput ? idInput.value.trim().toUpperCase() : "";
     return v;
   }
+  var urlId = "";
   try {
-    var p = new URLSearchParams(location.search).get("id");
-    if (p && idInput) { idInput.value = p.trim().toUpperCase(); }
+    urlId = (new URLSearchParams(location.search).get("id") || "").trim().toUpperCase();
+    if (urlId && idInput) { idInput.value = urlId; }
   } catch (e) {}
   function syncChip() {
     var v = currentId();
@@ -382,7 +383,8 @@
   }
 
   /* ---------- 儲存與進度 ---------- */
-  var KEY = "cier_hype_" + S.id;
+  var BASEKEY = "cier_hype_" + S.id;
+  var KEY = BASEKEY + (urlId ? "_" + urlId : "");
   var st = document.getElementById("st");
   var fill = document.getElementById("fill");
   var doneEl = document.getElementById("done");
@@ -428,6 +430,7 @@
   function restore() {
     try {
       var raw = localStorage.getItem(KEY);
+      if (!raw && urlId) raw = localStorage.getItem(BASEKEY);  /* 相容：先前未帶代碼所存之草稿 */
       if (!raw) return;
       var obj = JSON.parse(raw), d = obj.d || {};
       Object.keys(d).forEach(function (k) {
@@ -439,6 +442,7 @@
         var t = document.getElementById(k);
         if (t && (t.tagName === "TEXTAREA" || t.classList.contains("short"))) t.value = d[k];
       });
+      if (urlId && idInput) idInput.value = urlId;   /* 連結所帶之受訪者代碼優先於草稿 */
       var when = new Date(obj.t || Date.now());
       st.textContent = "已回復 " + pad(when.getMonth()+1) + "/" + pad(when.getDate())
                      + " " + pad(when.getHours()) + ":" + pad(when.getMinutes()) + " 之作答";
