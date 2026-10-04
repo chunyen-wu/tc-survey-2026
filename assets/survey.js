@@ -334,19 +334,6 @@
     }
   });
 
-  if (S.reflist && S.reflist.length) {
-    var rd = el("details","ref reflist");
-    var body = (S.refsrc ? '<p class="refnote">' + esc(S.refsrc) + '</p>' : "")
-      + '<ol class="refs">' + S.reflist.map(function (r) {
-          return '<li><span class="rid">' + esc(r[0]) + '</span>' + esc(r[1])
-            + (r[2] ? "（" + esc(r[2]) + "）" : "") + "，" + esc(r[3])
-            + (r[5] ? '　<span class="rsrc">' + esc(r[5]) + "</span>" : "") + "</li>";
-        }).join("") + "</ol>";
-    rd.innerHTML = '<summary>本卷事證之引用文獻（' + S.reflist.length + ' 筆）</summary>'
-      + '<div class="ref-body">' + body + "</div>";
-    root.appendChild(rd);
-  }
-
   /* 送出區 */
   var sub = el("div","submit");
   sub.innerHTML =
@@ -358,9 +345,9 @@
     + '<button type="button" class="ghost" id="btnBackup">下載作答備份</button>'
     + "</div>"
     + '<div class="result" id="res"></div>'
-    + '<p class="contact">填答期限　' + esc(CFG.deadline || "") + '　｜　如有任何疑問，請聯繫　'
-    + esc(CFG.contactName || "") + '　電話 ' + esc(CFG.contactPhone || "")
-    + '　電子郵件 ' + esc(CFG.contactEmail || "") + '</p>';
+    + '<div class="contact"><p>填答期限　' + esc(CFG.deadline || "") + '</p>'
+    + '<p>如有任何疑問，請聯繫　' + esc(CFG.contactName || "") + '</p>'
+    + '<p>電話 ' + esc(CFG.contactPhone || "") + '　電子郵件 ' + esc(CFG.contactEmail || "") + '</p></div>';
   root.appendChild(sub);
 
   /* 底部固定列 */

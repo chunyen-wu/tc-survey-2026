@@ -289,8 +289,9 @@ ol.refs li{margin-bottom:7px}
 ol.refs .rid{font-family:var(--mono);font-size:14px;color:var(--accent);margin-right:9px}
 ol.refs .rsrc{color:var(--ink-faint)}
 
-.submit .contact{margin:20px 0 0;padding-top:16px;border-top:1px solid var(--rule);
-  font-size:16px;line-height:1.8;color:var(--ink-soft)}
+.submit .contact{margin:22px 0 0;padding-top:16px;border-top:1px solid var(--rule)}
+.submit .contact p{margin:0 0 4px;font-size:16px;line-height:1.85;color:var(--ink-soft);max-width:none}
+.submit .contact p:last-child{margin-bottom:0}
 
 /* 共同定義：三節之分界與標題 */
 .ref-body h3{font-family:var(--serif);font-size:21px;font-weight:600;color:var(--ink);
@@ -316,3 +317,6 @@ table.list td.code{font-family:var(--mono);font-size:14px;color:var(--accent);wh
 table.list td.num{font-family:var(--mono);text-align:center;white-space:nowrap}
 table.list tr.grp th{background:var(--panel2);font-family:var(--sans);font-size:15px;color:var(--ink);
   font-weight:500;border-bottom:1px solid var(--rule-firm);letter-spacing:.02em}
+
+/* 清單中之對照組子類標示 */
+table.list .sub{font-family:var(--mono);font-size:13px;color:var(--ink-faint);letter-spacing:.04em}

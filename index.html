@@ -11,13 +11,12 @@
 <link rel="stylesheet" href="assets/survey.css">
 <style>
 .cards{display:grid;gap:14px;margin-top:26px}
-.card{border:1px solid var(--rule-firm);border-radius:2px;padding:24px 26px;background:var(--panel);
-  display:flex;flex-wrap:wrap;gap:16px;justify-content:space-between;align-items:flex-start}
+.card{border:1px solid var(--rule-firm);border-radius:2px;padding:24px 26px;background:var(--panel)}
 .card h3{font-family:var(--serif);font-size:22.5px;font-weight:600;margin:0 0 5px}
 .card p{margin:0;font-size:17.5px;color:var(--ink-soft);line-height:1.75;}
 .card .facts{font-family:var(--mono);font-size:15px;color:var(--ink-faint);margin-top:9px;letter-spacing:.03em}
-.card a.go{align-self:center;background:var(--accent);color:#fff;text-decoration:none;
-  padding:12px 24px;border-radius:2px;font-size:18px;font-weight:500;white-space:nowrap}
+.card a.go{display:inline-block;margin-top:18px;background:var(--accent);color:#fff;text-decoration:none;
+  padding:12px 28px;border-radius:2px;font-size:18px;font-weight:500;white-space:nowrap}
 :root[data-theme="dark"] .card a.go,:root:not([data-theme="light"]) .card a.go{color:#0e1416}
 @media (prefers-color-scheme:light){:root:not([data-theme="dark"]) .card a.go{color:#fff}}
 .card a.go:hover{opacity:.88}
