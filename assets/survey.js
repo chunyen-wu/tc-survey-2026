@@ -177,27 +177,53 @@
     { suf:"Q3", title:"本技術之碳費補助優先順序", optset:"prio0", type:"single", required:true }
   ];
 
+  var GTRL = { "3-4":["第 3 至 4 級","小型原型階段"], "5-6":["第 5 至 6 級","大型原型階段"],
+    "7-8":["第 7 至 8 級","示範階段"], "8-9":["第 8 至 9 級","示範至早期採用階段"],
+    "9-10":["第 9 至 10 級","早期採用階段"], "11":["第 11 級","成熟階段"] };
+  var LTRL = { 1:"無在地產業背景", 2:"政策列入但無研究啟動", 3:"有研究啟動，屬產學合作層級",
+    4:"試驗設施規劃中或實驗室規模", 5:"試驗設施運轉，小規模驗證", 6:"商業前示範，中規模驗證",
+    7:"商業前示範，大規模驗證", 8:"首套商業規模運轉（FOAK）", 9:"商業規模成熟" };
+  function trlBox(it) {
+    var g = GTRL[String(it.gtrl).trim()] || [String(it.gtrl), ""];
+    var l = parseInt(it.ltrl, 10);
+    var d = el("div","trlbox");
+    d.innerHTML =
+      '<div class="trlcell"><span class="tlab">全球技術成熟度</span>'
+      + '<b class="tval">' + esc(g[0]) + '</b><span class="tdef">' + esc(g[1]) + '</span>'
+      + '<span class="tsrc">引用 IEA 評估結果，量表為 1 至 11 級</span></div>'
+      + '<div class="trlcell local"><span class="tlab">我國在地技術成熟度</span>'
+      + '<b class="tval">第 ' + l + ' 級</b><span class="tdef">' + esc(LTRL[l] || "") + '</span>'
+      + '<span class="tsrc">本研究 1 至 9 級操作定義，請參見頁首對照表</span></div>';
+    return d;
+  }
+
+  function qlead(n) {
+    return el("div","qlead", "<span>以下 " + n + " 題請依您的專業判斷作答</span>");
+  }
+
   function keyItem(it, idx, total) {
     var sec = el("section","item");
     sec.id = "item_" + it.id;
     JUMPS.push({ id:sec.id, label:it.id + "　" + it.name });
-    sec.appendChild(el("p","eyebrow", esc(it.id) + "　項目 " + idx + " ／ " + total));
-    sec.appendChild(el("h3","iname", esc(it.name)));
-    sec.appendChild(el("p","meta",
-      "英文名稱（IEA 分類）<code>" + esc(it.en) + "</code>　｜　技術定位　" + esc(it.pos)));
+    var ih = el("div","ihead");
+    ih.appendChild(el("p","eyebrow", esc(it.id) + "　項目 " + idx + " ／ " + total));
+    ih.appendChild(el("h3","iname", esc(it.name)));
+    ih.appendChild(el("p","ename", esc(it.en || "")));
+    sec.appendChild(ih);
+    sec.appendChild(trlBox(it));
 
     var b1 = el("div","block prose");
     b1.innerHTML = "<h4>技術說明</h4><p>" + esc(it.desc) + "</p>";
     sec.appendChild(b1);
 
     var b2 = el("div","block prose");
-    b2.innerHTML = '<h4>國際發展現況<span class="trl">全球技術成熟度 ' + esc(it.gtrl) + '</span></h4><p>'
+    b2.innerHTML = '<h4>國際發展現況</h4><p>'
       + esc(it.intl) + "</p>";
     sec.appendChild(b2);
 
     var b3 = el("div","block prose");
     var locHtml = (it.local || []).map(function (p) { return "<p>" + esc(p) + "</p>"; }).join("");
-    b3.innerHTML = '<h4>我國在地發展事實<span class="trl">研究團隊評定之在地技術成熟度　第 ' + esc(it.ltrl) + ' 級</span></h4>'
+    b3.innerHTML = '<h4>我國在地發展事實</h4>'
       + locHtml
       + (it.note ? '<p class="judgenote"><b>評定說明　</b>' + esc(it.note) + "</p>" : "");
     sec.appendChild(b3);
@@ -210,7 +236,7 @@
       + "<thead><tr><th>證據維度</th><th>摘要</th></tr></thead><tbody>" + rows + "</tbody></table></div>";
     sec.appendChild(b4);
 
-    sec.appendChild(el("hr","qsep"));
+    sec.appendChild(qlead(KEY_Q.length));
     KEY_Q.forEach(function (t) {
       var q = { id: it.id + "-" + t.suf, title:t.title, type:t.type, optset:t.optset,
                 required:t.required, help:t.help };
@@ -225,11 +251,12 @@
   function genItem(it, idx, total) {
     var sec = el("section","item");
     sec.id = "item_" + it.id;
-    sec.appendChild(el("p","eyebrow", esc(it.id) + "　項目 " + idx + " ／ " + total));
-    sec.appendChild(el("h3","iname", esc(it.name)));
-    sec.appendChild(el("p","meta",
-      "英文名稱（IEA 分類）<code>" + esc(it.en) + "</code>　｜　技術定位　" + esc(it.pos)
-      + '　｜　<span class="trl">全球 ' + esc(it.gtrl) + ' 級／在地 第 ' + esc(it.ltrl) + ' 級</span>'));
+    var ih = el("div","ihead");
+    ih.appendChild(el("p","eyebrow", esc(it.id) + "　項目 " + idx + " ／ " + total));
+    ih.appendChild(el("h3","iname", esc(it.name)));
+    ih.appendChild(el("p","ename", esc(it.en || "")));
+    sec.appendChild(ih);
+    sec.appendChild(trlBox(it));
 
     var b1 = el("div","block prose");
     b1.innerHTML = "<h4>在地發展事證</h4><p>" + esc(it.lr || "查無在地公開資訊") + "</p>";
@@ -243,7 +270,7 @@
       + "<thead><tr><th>證據維度</th><th>摘要</th></tr></thead><tbody>" + rows + "</tbody></table></div>";
     sec.appendChild(b2);
 
-    sec.appendChild(el("hr","qsep"));
+    sec.appendChild(qlead(GEN_Q.length));
     GEN_Q.forEach(function (t) {
       sec.appendChild(question({ id: it.id + "-" + t.suf, title:t.title, type:t.type,
                                  optset:t.optset, required:t.required }, sec.id));
@@ -258,7 +285,7 @@
   mast.innerHTML =
     '<p class="org">環境部氣候變遷署　114年度補助溫室氣體減量管理及氣候變遷調適研究發展計畫</p>'
     + '<h1>減碳技術成熟度曲線構建與碳費投資成效分析</h1>'
-    + '<p class="sub">專家問卷（第一輪）　' + esc(S.title) + (S.subtitle ? "　" + esc(S.subtitle) : "") + '</p>'
+    + '<p class="sub">專家問卷　' + esc(S.title) + (S.subtitle ? "　" + esc(S.subtitle) : "") + '</p>'
     + '<div class="who"><span class="chip">受訪者代碼　<b id="ridChip">—</b></span>'
     + '<span class="chip">執行單位　財團法人中華經濟研究院</span>'
     + '<span class="chip">填答期限　' + esc(CFG.deadline || "") + '</span></div>';
@@ -302,6 +329,19 @@
     }
   });
 
+  if (S.reflist && S.reflist.length) {
+    var rd = el("details","ref reflist");
+    var body = (S.refsrc ? '<p class="refnote">' + esc(S.refsrc) + '</p>' : "")
+      + '<ol class="refs">' + S.reflist.map(function (r) {
+          return '<li><span class="rid">' + esc(r[0]) + '</span>' + esc(r[1])
+            + (r[2] ? "（" + esc(r[2]) + "）" : "") + "，" + esc(r[3])
+            + (r[5] ? '　<span class="rsrc">' + esc(r[5]) + "</span>" : "") + "</li>";
+        }).join("") + "</ol>";
+    rd.innerHTML = '<summary>本卷事證之引用文獻（' + S.reflist.length + ' 筆）</summary>'
+      + '<div class="ref-body">' + body + "</div>";
+    root.appendChild(rd);
+  }
+
   /* 送出區 */
   var sub = el("div","submit");
   sub.innerHTML =
@@ -312,7 +352,10 @@
     + '<button type="button" class="primary" id="btnSubmit">送出問卷</button>'
     + '<button type="button" class="ghost" id="btnBackup">下載作答備份</button>'
     + "</div>"
-    + '<div class="result" id="res"></div>';
+    + '<div class="result" id="res"></div>'
+    + '<p class="contact">填答期限　' + esc(CFG.deadline || "") + '　｜　如有任何疑問，請聯繫　'
+    + esc(CFG.contactName || "") + '　電話 ' + esc(CFG.contactPhone || "")
+    + '　電子郵件 ' + esc(CFG.contactEmail || "") + '</p>';
   root.appendChild(sub);
 
   /* 底部固定列 */
