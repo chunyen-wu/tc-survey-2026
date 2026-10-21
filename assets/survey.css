@@ -334,8 +334,27 @@ details.fold[open] summary{border-bottom:1px solid var(--rule);color:var(--ink)}
 .fold-body .judgenote{margin-top:14px}
 
 /* Hype Cycle 空白示意圖 */
-.hcwrap{margin:0 0 30px;padding:16px 18px 14px;background:var(--panel);border:1px solid var(--rule);border-radius:2px}
-.hcfig{margin:0;padding:0}
+.hcfig{margin:2px 0 26px;padding:0}
 .hcfig svg{display:block;width:100%;height:auto;max-width:720px}
 .hcfig figcaption{font-size:15px;line-height:1.7;color:var(--ink-faint);margin-top:4px;max-width:720px}
 @media (max-width:620px){.hcfig svg{min-width:0}.hcfig figcaption{font-size:14px}}
+
+/* ── 摺疊區之展開／收合提示（加強可辨識度） ───────────────── */
+details.ref summary,
+details.fold summary{transition:background .12s ease}
+details.ref summary:hover,
+details.fold summary:hover{background:var(--panel2)}
+details.ref summary::after,
+details.fold summary::after{
+  content:"展開 ▾";font-family:var(--sans);font-size:15px;font-weight:500;
+  color:var(--accent-ink);background:var(--accent-soft);
+  border:1px solid var(--accent);border-radius:999px;
+  padding:3px 14px;letter-spacing:.04em;white-space:nowrap;flex:none;line-height:1.5}
+details.ref[open] summary::after,
+details.fold[open] summary::after{content:"收合 ▴"}
+details.ref summary:hover::after,
+details.fold summary:hover::after{background:var(--accent);color:var(--paper)}
+@media (max-width:620px){
+  details.ref summary::after,
+  details.fold summary::after{font-size:14px;padding:2px 11px}
+}
