@@ -320,3 +320,21 @@ table.list tr.grp th{background:var(--panel2);font-family:var(--sans);font-size:
 
 /* 清單中之對照組子類標示 */
 table.list .sub{font-family:var(--mono);font-size:13px;color:var(--ink-faint);letter-spacing:.04em}
+
+/* 項目內之摺疊區（技術說明、五維證據與判定） */
+details.fold{border:1px solid var(--rule);border-radius:2px;background:var(--panel);margin:0 0 20px}
+details.fold summary{cursor:pointer;padding:13px 18px;font-size:16px;font-weight:500;color:var(--ink-soft);
+  list-style:none;display:flex;justify-content:space-between;align-items:center;gap:14px}
+details.fold summary::-webkit-details-marker{display:none}
+details.fold summary::after{content:"展開";font-family:var(--mono);font-size:13px;color:var(--accent);letter-spacing:.06em;flex:none}
+details.fold[open] summary::after{content:"收合"}
+details.fold[open] summary{border-bottom:1px solid var(--rule);color:var(--ink)}
+.fold-body{padding:16px 18px 18px}
+.fold-body>p{margin:0;font-size:19px;line-height:1.85}
+.fold-body .judgenote{margin-top:14px}
+
+/* Hype Cycle 空白示意圖 */
+.hcfig{margin:0 0 30px;padding:2px 0 0}
+.hcfig svg{display:block;width:100%;height:auto;max-width:720px}
+.hcfig figcaption{font-size:15px;line-height:1.7;color:var(--ink-faint);margin-top:4px;max-width:720px}
+@media (max-width:620px){.hcfig svg{min-width:0}.hcfig figcaption{font-size:14px}}

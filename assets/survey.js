@@ -161,8 +161,8 @@
 
   /* ---------- 渲染：技術項目 ---------- */
   var KEY_Q = [
-    { suf:"Q1", title:"依上開證據，本技術之「全球」Hype Cycle 階段應判定為", optset:"stage", type:"single", required:true, teamHelp:"G" },
-    { suf:"Q2", title:"依上開證據，本技術之「我國在地」Hype Cycle 階段應判定為", optset:"stage", type:"single", required:true, teamHelp:"L" },
+    { suf:"Q1", title:"本技術之「全球」Hype Cycle 階段", optset:"stage", type:"single", required:true },
+    { suf:"Q2", title:"本技術之「我國在地」Hype Cycle 階段", optset:"stage", type:"single", required:true },
     { suf:"Q3", title:"技術潛力四構面評分", type:"matrix4",
       help:"本研究將依既定權重加總後換算為技術潛力級別，故請就各構面分別評分，毋須直接評定級別。各構面之級距定義列於選項內。" },
     { suf:"Q4", title:"本技術自現階段發展至我國商業化規模應用之預估時程", optset:"time", type:"single", required:true },
@@ -212,9 +212,10 @@
     sec.appendChild(ih);
     sec.appendChild(trlBox(it));
 
-    var b1 = el("div","block prose");
-    b1.innerHTML = "<h4>技術說明</h4><p>" + esc(it.desc) + "</p>";
-    sec.appendChild(b1);
+    var d1 = el("details","fold");
+    d1.innerHTML = '<summary>技術說明</summary><div class="fold-body prose"><p>'
+      + esc(it.desc) + "</p></div>";
+    sec.appendChild(d1);
 
     var b2 = el("div","block prose");
     b2.innerHTML = '<h4>國際發展現況</h4><p>'
@@ -228,25 +229,25 @@
       + (it.note ? '<p class="judgenote"><b>評定說明　</b>' + esc(it.note) + "</p>" : "");
     sec.appendChild(b3);
 
-    var b4 = el("div","block");
+    var d2 = el("details","fold");
     var rows = (it.ev || []).map(function (e) {
       return "<tr><th>" + esc(e[0]) + "</th><td>" + esc(e[1]) + "</td></tr>";
     }).join("");
-    b4.innerHTML = "<h4>五維證據摘要</h4><div class='tablewrap'><table class='ev'>"
-      + "<thead><tr><th>證據維度</th><th>摘要</th></tr></thead><tbody>" + rows + "</tbody></table></div>";
-    sec.appendChild(b4);
+    d2.innerHTML = '<summary>研究團隊所蒐集之五維證據摘要與判定結果</summary><div class="fold-body">'
+      + "<div class='tablewrap'><table class='ev'>"
+      + "<thead><tr><th>證據維度</th><th>摘要</th></tr></thead><tbody>" + rows + "</tbody></table></div>"
+      + ((it.teamG || it.teamL)
+          ? '<p class="judgenote"><b>研究團隊之判定　</b>全球階段：' + esc(it.teamG || "—")
+            + "；我國在地階段：" + esc(it.teamL || "—")
+            + "。此一資訊僅供參考，請依您的專業判斷作答，毋須與之一致。</p>"
+          : "")
+      + "</div>";
+    sec.appendChild(d2);
 
     sec.appendChild(qlead(KEY_Q.length));
     KEY_Q.forEach(function (t) {
       var q = { id: it.id + "-" + t.suf, title:t.title, type:t.type, optset:t.optset,
                 required:t.required, help:t.help };
-      if (t.teamHelp) {
-        var tv = (t.teamHelp === "G") ? it.teamG : it.teamL;
-        if (tv) {
-          q.help = "研究團隊就本題之判定為　<b>" + esc(tv)
-            + "</b>。此一資訊僅供參考，請依您的專業判斷作答，毋須與之一致。";
-        }
-      }
       sec.appendChild(question(q, sec.id));
     });
     return sec;
@@ -266,13 +267,14 @@
     b1.innerHTML = "<h4>在地發展事證</h4><p>" + esc(it.lr || "查無在地公開資訊") + "</p>";
     sec.appendChild(b1);
 
-    var b2 = el("div","block");
+    var dg = el("details","fold");
     var rows = (it.ev || []).map(function (e) {
       return "<tr><th>" + esc(e[0]) + "</th><td>" + esc(e[1]) + "</td></tr>";
     }).join("");
-    b2.innerHTML = "<h4>五維證據摘要</h4><div class='tablewrap'><table class='ev'>"
-      + "<thead><tr><th>證據維度</th><th>摘要</th></tr></thead><tbody>" + rows + "</tbody></table></div>";
-    sec.appendChild(b2);
+    dg.innerHTML = '<summary>研究團隊所蒐集之五維證據摘要</summary><div class="fold-body">'
+      + "<div class='tablewrap'><table class='ev'>"
+      + "<thead><tr><th>證據維度</th><th>摘要</th></tr></thead><tbody>" + rows + "</tbody></table></div></div>";
+    sec.appendChild(dg);
 
     sec.appendChild(qlead(GEN_Q.length));
     GEN_Q.forEach(function (t) {
@@ -280,6 +282,22 @@
                                  optset:t.optset, required:t.required }, sec.id));
     });
     return sec;
+  }
+
+  /* ---------- Hype Cycle 六階段空白示意圖（不標示任何技術項目） ---------- */
+  var HCFIG = "<figure class='hcfig'><svg viewBox='0 0 720 232' role='img' aria-labelledby='hcT' xmlns='http://www.w3.org/2000/svg'><title id='hcT'>技術成熟度曲線六階段示意圖</title><line x1='52' y1='180' x2='700' y2='180' stroke='var(--rule)' stroke-width='1'/><path d='M 52.0 137.9 L 57.4 137.5 L 62.8 137.0 L 68.2 136.4 L 73.6 135.5 L 79.0 134.5 L 84.4 133.3 L 89.8 131.8 L 95.2 129.9 L 100.6 127.8 L 106.0 125.2 L 111.4 122.2 L 116.8 118.7 L 122.2 114.8 L 127.6 110.4 L 133.0 105.4 L 138.4 100.0 L 143.8 94.2 L 149.2 87.9 L 154.6 81.3 L 160.0 74.5 L 165.4 67.6 L 170.8 60.6 L 176.2 53.9 L 181.6 47.4 L 187.0 41.3 L 192.4 35.9 L 197.8 31.1 L 203.2 27.3 L 208.6 24.4 L 214.0 22.7 L 219.4 22.0 L 224.8 22.5 L 230.2 24.2 L 235.6 27.0 L 241.0 30.8 L 246.4 35.7 L 251.8 41.5 L 257.2 48.0 L 262.6 55.1 L 268.0 62.8 L 273.4 70.7 L 278.8 79.0 L 284.2 87.3 L 289.6 95.5 L 295.0 103.7 L 300.4 111.6 L 305.8 119.2 L 311.2 126.4 L 316.6 133.2 L 322.0 139.5 L 327.4 145.4 L 332.8 150.6 L 338.2 155.4 L 343.6 159.5 L 349.0 163.1 L 354.4 166.0 L 359.8 168.4 L 365.2 170.2 L 370.6 171.3 L 376.0 171.9 L 381.4 172.0 L 386.8 171.5 L 392.2 170.6 L 397.6 169.2 L 403.0 167.4 L 408.4 165.3 L 413.8 162.9 L 419.2 160.2 L 424.6 157.4 L 430.0 154.5 L 435.4 151.4 L 440.8 148.4 L 446.2 145.3 L 451.6 142.3 L 457.0 139.3 L 462.4 136.4 L 467.8 133.6 L 473.2 130.8 L 478.6 128.1 L 484.0 125.6 L 489.4 123.1 L 494.8 120.6 L 500.2 118.2 L 505.6 115.9 L 511.0 113.6 L 516.4 111.3 L 521.8 109.0 L 527.2 106.8 L 532.6 104.6 L 538.0 102.4 L 543.4 100.2 L 548.8 98.0 L 554.2 95.9 L 559.6 93.9 L 565.0 91.8 L 570.4 89.9 L 575.8 88.0 L 581.2 86.1 L 586.6 84.4 L 592.0 82.7 L 597.4 81.1 L 602.8 79.6 L 608.2 78.2 L 613.6 76.8 L 619.0 75.6 L 624.4 74.4 L 629.8 73.3 L 635.2 72.3 L 640.6 71.4 L 646.0 70.5 L 651.4 69.7 L 656.8 69.0 L 662.2 68.3 L 667.6 67.7 L 673.0 67.2 L 678.4 66.6 L 683.8 66.2 L 689.2 65.7 L 694.6 65.4 L 700.0 65.0' fill='none' stroke='var(--accent)' stroke-width='2.4' stroke-linecap='round' stroke-linejoin='round'/><line x1='90.9' y1='136.4' x2='90.9' y2='180' stroke='var(--rule)' stroke-width='1' stroke-dasharray='2 3'/><circle cx='90.9' cy='131.4' r='3.2' fill='var(--paper)' stroke='var(--accent)' stroke-width='1.6'/><text x='90.9' y='197' text-anchor='middle' font-size='13.5' fill='var(--ink-soft)'>創新萌芽期</text><line x1='207.5' y1='29.9' x2='207.5' y2='180' stroke='var(--rule)' stroke-width='1' stroke-dasharray='2 3'/><circle cx='207.5' cy='24.9' r='3.2' fill='var(--paper)' stroke='var(--accent)' stroke-width='1.6'/><text x='207.5' y='197' text-anchor='middle' font-size='13.5' fill='var(--ink-soft)'>期望膨脹期</text><line x1='311.2' y1='131.4' x2='311.2' y2='180' stroke='var(--rule)' stroke-width='1' stroke-dasharray='2 3'/><circle cx='311.2' cy='126.4' r='3.2' fill='var(--paper)' stroke='var(--accent)' stroke-width='1.6'/><text x='311.2' y='197' text-anchor='middle' font-size='13.5' fill='var(--ink-soft)'>幻滅低谷期</text><text x='311.2' y='215' text-anchor='middle' font-size='13.5' fill='var(--ink-soft)'>（前段）</text><line x1='424.6' y1='162.4' x2='424.6' y2='180' stroke='var(--rule)' stroke-width='1' stroke-dasharray='2 3'/><circle cx='424.6' cy='157.4' r='3.2' fill='var(--paper)' stroke='var(--accent)' stroke-width='1.6'/><text x='424.6' y='197' text-anchor='middle' font-size='13.5' fill='var(--ink-soft)'>幻滅低谷期</text><text x='424.6' y='215' text-anchor='middle' font-size='13.5' fill='var(--ink-soft)'>（中段）</text><line x1='551.0' y1='102.2' x2='551.0' y2='180' stroke='var(--rule)' stroke-width='1' stroke-dasharray='2 3'/><circle cx='551.0' cy='97.2' r='3.2' fill='var(--paper)' stroke='var(--accent)' stroke-width='1.6'/><text x='551.0' y='197' text-anchor='middle' font-size='13.5' fill='var(--ink-soft)'>迭代爬升期</text><text x='551.0' y='215' text-anchor='middle' font-size='13.5' fill='var(--ink-soft)'>（早段）</text><line x1='664.4' y1='73.1' x2='664.4' y2='180' stroke='var(--rule)' stroke-width='1' stroke-dasharray='2 3'/><circle cx='664.4' cy='68.1' r='3.2' fill='var(--paper)' stroke='var(--accent)' stroke-width='1.6'/><text x='664.4' y='197' text-anchor='middle' font-size='13.5' fill='var(--ink-soft)'>實質生產期</text><text x='18' y='101' text-anchor='middle' font-size='13' fill='var(--ink-faint)' transform='rotate(-90 18 101)'>市場期望</text></svg><figcaption>技術成熟度曲線之六個階段。本圖僅說明階段順序與曲線形狀，未標示任何技術項目之位置。</figcaption></figure>";
+  function insertHypeFig(root) {
+    var hs = root.getElementsByTagName("h3");
+    for (var i = 0; i < hs.length; i++) {
+      if (hs[i].textContent.indexOf("Hype Cycle") >= 0) {
+        var w = document.createElement("div");
+        w.innerHTML = HCFIG;
+        var fig = w.firstChild;
+        if (hs[i].nextSibling) { hs[i].parentNode.insertBefore(fig, hs[i].nextSibling); }
+        else { hs[i].parentNode.appendChild(fig); }
+        return;
+      }
+    }
   }
 
   /* ---------- 建構頁面 ---------- */
@@ -305,6 +323,7 @@
     var d = el("details","ref");
     d.innerHTML = '<summary>' + esc(S.reference.title) + '</summary><div class="ref-body">'
       + S.reference.html + '</div>';
+    insertHypeFig(d);
     root.appendChild(d);
   }
 
@@ -316,7 +335,7 @@
       var h = el("div","sect-head");
       h.innerHTML = "<h2>" + esc(sc.title) + "</h2>" + (sc.note ? "<p>" + sc.note + "</p>" : "");
       sec.appendChild(h);
-      if (sc.html) { var ex = el("div","secextra"); ex.innerHTML = sc.html; sec.appendChild(ex); }
+      if (sc.html) { var ex = el("div","secextra"); ex.innerHTML = sc.html; insertHypeFig(ex); sec.appendChild(ex); }
       (sc.questions || []).forEach(function (q) { sec.appendChild(question(q, sec.id)); });
       root.appendChild(sec);
     } else if (sc.type === "items") {
