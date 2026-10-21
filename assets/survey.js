@@ -319,11 +319,15 @@
     root.appendChild(intro);
   }
 
+  /* 空白版技術成熟度曲線：固定顯示，不收於摺疊區 */
+  var hcw = el("div", "hcwrap");
+  hcw.innerHTML = HCFIG;
+  root.appendChild(hcw);
+
   if (S.reference) {
     var d = el("details","ref");
     d.innerHTML = '<summary>' + esc(S.reference.title) + '</summary><div class="ref-body">'
       + S.reference.html + '</div>';
-    insertHypeFig(d);
     root.appendChild(d);
   }
 

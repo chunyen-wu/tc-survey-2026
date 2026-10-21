@@ -334,7 +334,8 @@ details.fold[open] summary{border-bottom:1px solid var(--rule);color:var(--ink)}
 .fold-body .judgenote{margin-top:14px}
 
 /* Hype Cycle 空白示意圖 */
-.hcfig{margin:0 0 30px;padding:2px 0 0}
+.hcwrap{margin:0 0 30px;padding:16px 18px 14px;background:var(--panel);border:1px solid var(--rule);border-radius:2px}
+.hcfig{margin:0;padding:0}
 .hcfig svg{display:block;width:100%;height:auto;max-width:720px}
 .hcfig figcaption{font-size:15px;line-height:1.7;color:var(--ink-faint);margin-top:4px;max-width:720px}
 @media (max-width:620px){.hcfig svg{min-width:0}.hcfig figcaption{font-size:14px}}
