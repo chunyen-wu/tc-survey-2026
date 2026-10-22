@@ -6,7 +6,7 @@ window.CIER_CONFIG = {
   /* 【必填】Apps Script 網頁應用程式的網址。
    * 部署 backend/Code.gs 後取得，格式為
    * https://script.google.com/macros/s/AKfycb...../exec          */
-  endpoint: "",
+  endpoint: "https://script.google.com/macros/s/AKfycbxHw_wmhnl_Q9MdeYfdpI-DujWMDtVuV5k-XmKnUkKQWYgqeAFvUeXB-lP94XoJnilUNg/exec",
 
   /* 承辦人聯絡資訊，顯示於問卷說明與送出失敗時的指引 */
   contactName:  "許瓊文",
