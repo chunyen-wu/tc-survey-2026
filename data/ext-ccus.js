@@ -843,7 +843,7 @@ window.SURVEY = {
     },
     {
      "id": "C-T1",
-     "name": "管道",
+     "name": "二氧化碳管線運輸",
      "en": "Pipeline",
      "gtrl": "11",
      "ltrl": "2",
